@@ -1,19 +1,26 @@
-class Parent {
-    public void printParent() {
-        System.out.println("This is parent class");
+
+public class Main
+ {
+    public static void main (String[] args) {
+        child1 c1 = new child1();
+        child2 c2 = new child2();
     }
 }
-class Child extends Parent {
-    public void printChild() {
-        System.out.println("This is child class");
+
+class base {
+    base() {
+        System.out.println("this is base class call");
     }
 }
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Parent();
-        parent.printParent(); 
-        Child child = new Child();
-        child.printParent(); 
-        child.printChild(); 
+
+class child1 extends base {
+    child1() {
+        System.out.println("this is child 1");
+    }
+}
+
+class child2 extends child1 {
+    child2() {
+        System.out.println("this is child 2");
     }
 }
